@@ -3,156 +3,116 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Premium bar at De Coastal Place — Signature cocktails, fine wines, and local favourites in Effurun, Warri, Delta State.">
-  <title>Premium Bar — De Coastal Place</title>
+  <meta name="description" content="Premium bar at De Coastal Place — signature cocktails, wines, and local favourites in Effurun, Warri.">
+  <title>Bar — De Coastal Place</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Top Contact Banner -->
-  <div class="top-banner">
-    <span>&#x1F4CD; Effurun, Warri, Delta State, Nigeria</span>
-    <span>&#x1F4DE; <a href="tel:+2348000000000">+234 800 000 0000</a></span>
-    <span>&#x1F4E7; <a href="mailto:hello@decoastalplace.com">hello@decoastalplace.com</a></span>
-  </div>
+<nav>
+  <a href="index.html" class="nav-logo">De Coastal<span> Place</span></a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="experiences.html">Experiences</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="booking.html" class="nav-cta">Book Now</a>
+  <button class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
 
-  <!-- Navbar -->
-  <nav class="navbar" aria-label="Main navigation">
-    <div class="container">
-      <a href="index.html" class="nav-logo">
-        <span class="nav-logo-icon">DC</span>
-        De Coastal Place
-      </a>
-      <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#x2630;</button>
-      <ul class="nav-links">
+<section class="page-hero">
+  <div class="hero-bg"><img src="images/bar.jpg" alt="De Coastal Place bar"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="hero-label">&#x2726; Bar</span>
+    <h1>The Premium Bar</h1>
+  </div>
+</section>
+
+<section class="content-section warm">
+  <div class="content-grid">
+    <div>
+      <span class="section-label">&#x2726; Cocktails &amp; More</span>
+      <div class="gold-divider"></div>
+      <h2 class="section-title">Raise a Glass to the Good Life</h2>
+      <div class="content-body">
+        <p>Our bar is the heart of De Coastal Place&mdash;a warm, inviting space where conversations flow as freely as the drinks. Whether you are winding down after work or kicking off a weekend celebration, you will find the perfect pour.</p>
+        <p>Our bartenders are masters of their craft. From classic cocktails to original creations infused with local flavours, every drink is made with precision and care.</p>
+        <p>Browse our selection of premium spirits, crisp wines, ice-cold beers, and non-alcoholic specials. There is something for every palate.</p>
+      </div>
+    </div>
+    <div style="height:400px;">
+      <img src="images/bar.jpg" alt="Bar area" style="width:100%;height:100%;object-fit:cover;">
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="inner" style="text-align:center;">
+    <span class="section-label">&#x2726; Signature Drinks</span>
+    <div class="gold-divider" style="margin:0 auto 1.5rem;"></div>
+    <h2 class="section-title">Try Our Favourites</h2>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:2rem; margin-top:2.5rem;">
+      <div style="border:1px solid var(--border); padding:2rem;">
+        <div style="font-family:var(--font-serif); font-size:1.3rem; color:var(--gold); margin-bottom:0.5rem;">The Coastal Breeze</div>
+        <div style="font-family:var(--font-sans); font-size:0.78rem; color:var(--muted);">Vodka, coconut cream, pineapple, lime</div>
+      </div>
+      <div style="border:1px solid var(--border); padding:2rem;">
+        <div style="font-family:var(--font-serif); font-size:1.3rem; color:var(--gold); margin-bottom:0.5rem;">Warri Sunset</div>
+        <div style="font-family:var(--font-sans); font-size:0.78rem; color:var(--muted);">Whiskey, ginger, honey, bitters</div>
+      </div>
+      <div style="border:1px solid var(--border); padding:2rem;">
+        <div style="font-family:var(--font-serif); font-size:1.3rem; color:var(--gold); margin-bottom:0.5rem;">Effurun Mule</div>
+        <div style="font-family:var(--font-sans); font-size:0.78rem; color:var(--muted);">Gin, lime, ginger beer, mint</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">De Coastal<span> Place</span></div>
+      <p class="footer-tagline">Effurun's premier coastal leisure destination&mdash;where great food, good vibes, and unforgettable events come together.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="about.html">About Us</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="experiences.html">Experiences</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="booking.html" class="nav-cta">Book Now</a></li>
       </ul>
     </div>
-  </nav>
-
-  <!-- Sub Navigation -->
-  <div class="sub-nav">
-    <div class="container">
-      <nav class="sub-nav-links" aria-label="Experience navigation">
-        <a href="dining.html">Dining</a>
-        <a href="bar.html" class="active">Bar</a>
-        <a href="events.html">Events</a>
-        <a href="lounge.html">Lounge</a>
-        <a href="pool.html">Pool</a>
-      </nav>
+    <div class="footer-col">
+      <h4>Venue</h4>
+      <ul>
+        <li><a href="dining.html">Dining</a></li>
+        <li><a href="bar.html">Bar</a></li>
+        <li><a href="lounge.html">Lounge</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="pool.html">Pool</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="booking.html">Book Now</a></li>
+        <li><a href="https://instagram.com/decoastalplace" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li><a href="https://wa.me/2340000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+      </ul>
     </div>
   </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 De Coastal Place. Effurun, Warri, Delta State, Nigeria.</p>
+  </div>
+</footer>
 
-  <!-- Hero -->
-  <section class="hero-inner" aria-label="Bar hero">
-    <img src="images/bar-hero.jpg" alt="Premium bar at De Coastal Place" loading="lazy">
-    <div class="hero-overlay">
-      <h1 class="page-title">Premium Bar</h1>
-    </div>
-  </section>
-
-  <!-- Intro -->
-  <section class="section section-white">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Signature Sips & Coastal Spirits</h2>
-        <p class="subtitle">An expertly curated selection of cocktails, wines, and local favourites in a setting that hums with coastal energy.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Bar Cards -->
-  <section class="section section-hapuna">
-    <div class="container">
-      <div class="card-grid">
-        <article class="card">
-          <img src="images/bar-1.jpg" alt="Signature cocktails at De Coastal Place" class="card-media" loading="lazy">
-          <div class="card-body">
-            <h3 class="card-title">Signature Cocktails</h3>
-            <p>Our mixologists craft original cocktails inspired by the coast — think palm-kissed margaritas, ginger-infused spritzes, and tropical classics reimagined.</p>
-          </div>
-        </article>
-        <article class="card">
-          <img src="images/bar-2.jpg" alt="Wine selection at De Coastal Place" class="card-media" loading="lazy">
-          <div class="card-body">
-            <h3 class="card-title">Curated Wines</h3>
-            <p>A thoughtfully selected wine list featuring Old World classics and New World discoveries. By the glass or by the bottle, every pour tells a story.</p>
-          </div>
-        </article>
-        <article class="card">
-          <img src="images/bar-3.jpg" alt="Local Nigerian favourites at De Coastal Place bar" class="card-media" loading="lazy">
-          <div class="card-body">
-            <h3 class="card-title">Local Favourites</h3>
-            <p>Celebrating Nigerian drinking culture — from chilled palm wine and zobo cocktails to premium local spirits and stout. A true taste of the Delta.</p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="section section-white">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Join Us at the Bar</h2>
-        <p class="subtitle">Good drinks, great company, coastal vibes. Reserve your spot.</p>
-        <a href="booking.html" class="button-primary" style="margin-top:var(--spacing-macro24px);">Reserve a Spot</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/2348000000000?text=Hello%20De%20Coastal%20Place!%20I%27d%20like%20to%20visit%20the%20bar." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
-    &#x1F4AC;
-  </a>
-
-  <!-- Footer -->
-  <footer class="footer" aria-label="Site footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="nav-logo">
-            <span class="nav-logo-icon">DC</span>
-            De Coastal Place
-          </div>
-          <p>Where the coast meets good living. Premier leisure, fine dining, and events destination in the heart of Effurun, Warri, Delta State.</p>
-        </div>
-        <div class="footer-links">
-          <h4>Quick Links</h4>
-          <a href="about.html">About Us</a>
-          <a href="dining.html">Dining</a>
-          <a href="bar.html">Bar</a>
-          <a href="events.html">Events</a>
-          <a href="gallery.html">Gallery</a>
-        </div>
-        <div class="footer-links">
-          <h4>Experiences</h4>
-          <a href="lounge.html">Lounge</a>
-          <a href="pool.html">Pool & Leisure</a>
-          <a href="booking.html">Book an Event</a>
-          <a href="contact.html">Contact Us</a>
-        </div>
-        <div class="footer-links">
-          <h4>Contact</h4>
-          <a href="https://maps.google.com/?q=Effurun+Warri+Delta+State+Nigeria" target="_blank" rel="noopener noreferrer">Effurun, Warri</a>
-          <a href="https://maps.google.com/?q=Delta+State+Nigeria" target="_blank" rel="noopener noreferrer">Delta State, Nigeria</a>
-          <a href="tel:+2348000000000">+234 800 000 0000</a>
-          <a href="mailto:hello@decoastalplace.com">hello@decoastalplace.com</a>
-          <a href="https://wa.me/2348000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 De Coastal Place. All rights reserved.</p>
-        <p>Crafted with warmth in the Niger Delta</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
