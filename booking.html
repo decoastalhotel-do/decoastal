@@ -35,27 +35,9 @@
   </div>
 </section>
 
-<div class="booking-bar">
-  <div class="booking-inner">
-    <div class="booking-field">
-      <span class="booking-label">Check In</span>
-      <span class="booking-value">Select date</span>
-    </div>
-    <div class="booking-field">
-      <span class="booking-label">Check Out</span>
-      <span class="booking-value">Select date</span>
-    </div>
-    <div class="booking-field">
-      <span class="booking-label">Guests</span>
-      <span class="booking-value">2 Adults</span>
-    </div>
-    <button class="booking-submit">Check Availability</button>
-  </div>
-</div>
-
 <section class="content-section warm">
   <div class="inner" style="text-align:center; max-width:700px;">
-    <span class="section-label">&#x2726; Select Your Room</span>
+    <span class="section-label">&#x2726; Our Rooms</span>
     <div class="gold-divider" style="margin:0 auto 1.5rem;"></div>
     <h2 class="section-title">Choose Your Perfect Space</h2>
     <p class="section-desc" style="margin:0 auto;">Every room at De Coastal Place is designed for comfort. Select the room that suits your needs and we will take care of the rest.</p>
@@ -64,173 +46,147 @@
 
 <section class="content-section" style="padding-top:0;">
   <div class="inner">
-    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:2px;">
-      <div style="border:1px solid var(--border); padding:2rem;">
-        <span class="section-label">&#x2726; Standard</span>
-        <div style="font-family:var(--font-serif); font-size:1.6rem; margin:0.5rem 0 1rem;">Comfortable &amp; Cosy</div>
-        <ul style="list-style:none; margin-bottom:1.5rem;">
-          <li style="font-family:var(--font-sans); font-size:0.78rem; color:var(--muted); padding:0.3rem 0; border-bottom:1px solid var(--border);">Queen-sized bed</li>
-          <li style="font-family:var(--font-sans); font-size:0.78rem; color:var(--muted); padding:0.3rem 0; border-bottom:1px solid var(--border);">En-suite bathroom</li>
-          <li style="font-family:var(--font-sans); font-size:0.78rem; color:var(--muted); padding:0.3rem 0; border-bottom:1px solid var(--border);">Air conditioning</li>
-          <li style="font-family:var(--font-sans); font-size:0.78rem; color:var(--muted); padding:0.3rem 0; border-bottom:1px solid var(--border);">Free Wi-Fi</li>
-          <li style="font-family:var(--font-sans); font-size:0.78rem; color:var(--muted); padding:0.3rem 0;">Flat-screen TV</li>
-        </ul>
-        <a href="#book-form" class="btn-primary" style="display:block;text-align:center;">Book Standard</a>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1px;">
+
+      <!-- STANDARD -->
+      <div style="border:1px solid var(--border);">
+        <div style="height:200px; background:var(--bg-warm); display:flex; align-items:center; justify-content:center; border-bottom:1px solid var(--border);">
+          <img src="images/pool.jpg" alt="Standard Room" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div style="padding:1.5rem;">
+          <span style="display:inline-block; font-family:var(--font-sans); font-size:0.5rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; background:var(--gold); color:var(--white); padding:0.25rem 0.8rem; margin-bottom:0.8rem;">Standard</span>
+          <div style="font-family:var(--font-serif); font-size:1.3rem; margin-bottom:0.3rem;">Comfortable &amp; Cosy</div>
+          <span style="font-family:var(--font-sans); font-size:0.65rem; color:var(--green); font-weight:500;">&#x2713; Available</span>
+          <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:0.5rem; margin:1rem 0; padding:0.8rem 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+            <div style="text-align:center;">
+              <div style="font-family:var(--font-sans); font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold);">Bed</div>
+              <div style="font-family:var(--font-sans); font-size:0.75rem; color:var(--onyx); margin-top:2px;">Queen</div>
+            </div>
+            <div style="text-align:center;">
+              <div style="font-family:var(--font-sans); font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold);">Guests</div>
+              <div style="font-family:var(--font-sans); font-size:0.75rem; color:var(--onyx); margin-top:2px;">2</div>
+            </div>
+            <div style="text-align:center;">
+              <div style="font-family:var(--font-sans); font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold);">Size</div>
+              <div style="font-family:var(--font-sans); font-size:0.75rem; color:var(--onyx); margin-top:2px;">28 m&sup2;</div>
+            </div>
+          </div>
+          <p style="font-family:var(--font-sans); font-size:0.78rem; color:var(--muted); line-height:1.7; margin-bottom:1rem;">A warm and inviting space with all the essentials for a restful stay. Thoughtfully appointed for the practical traveller.</p>
+          <div style="font-family:var(--font-serif); font-size:1.5rem; color:var(--gold); margin-bottom:1rem;">&#x20A6;35,000 <span style="font-family:var(--font-sans); font-size:0.65rem; color:var(--muted);">/ night</span></div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.5rem;">
+            <a href="booking.html?room=standard" class="btn-primary" style="text-align:center; font-size:0.55rem; padding:0.7rem 1rem;">Book Now</a>
+            <a href="rooms.html" class="btn-ghost" style="text-align:center; font-size:0.55rem; padding:0.7rem 1rem; color:var(--onyx); border-color:var(--border);">View Details</a>
+          </div>
+        </div>
       </div>
-      <div style="border:1px solid var(--gold); padding:2rem; position:relative;">
-        <div style="position:absolute; top:-1px; left:50%; transform:translateX(-50%); background:var(--gold); color:var(--white); font-family:var(--font-sans); font-size:0.5rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; padding:0.3rem 1rem;">Recommended</div>
-        <span class="section-label">&#x2726; Deluxe</span>
-        <div style="font-family:var(--font-serif); font-size:1.6rem; margin:0.5rem 0 1rem;">Elevated Comfort</div>
-        <ul style="list-style:none; margin-bottom:1.5rem;">
-          <li style="font-family:var(--font-sans); font-size:0.78rem; color:var(--muted); padding:0.3rem 0; border-bottom:1px solid var(--border);">King-sized bed</li>
-          <li style="font-family:var(--font-sans); font-size:0.78rem; color:var(--muted); padding:0.3rem 0; border-bottom:1px solid var(--border);">Spacious en-suite</li>
-          <li style="font-family:var(--font-sans); font-size:0.78rem; color:var(--muted); padding:0.3rem 0; border-bottom:1px solid var(--border);">Sitting area</li>
-          <li style="font-family:var(--font-sans); font-size:0.78rem; color:var(--muted); padding:0.3rem 0; border-bottom:1px solid var(--border);">Premium bedding</li>
-          <li style="font-family:var(--font-sans); font-size:0.78rem; color:var(--muted); padding:0.3rem 0;">Rainfall shower</li>
-        </ul>
-        <a href="#book-form" class="btn-primary" style="display:block;text-align:center;">Book Deluxe</a>
+
+      <!-- DELUXE -->
+      <div style="border:1px solid var(--gold); position:relative;">
+        <div style="position:absolute; top:-1px; left:50%; transform:translateX(-50%); background:var(--gold); color:var(--white); font-family:var(--font-sans); font-size:0.5rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; padding:0.3rem 1rem; z-index:2;">Recommended</div>
+        <div style="height:200px; background:var(--bg-warm); display:flex; align-items:center; justify-content:center; border-bottom:1px solid var(--border);">
+          <img src="images/lounge.jpg" alt="Deluxe Room" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div style="padding:1.5rem;">
+          <span style="display:inline-block; font-family:var(--font-sans); font-size:0.5rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; background:var(--gold); color:var(--white); padding:0.25rem 0.8rem; margin-bottom:0.8rem;">Deluxe</span>
+          <div style="font-family:var(--font-serif); font-size:1.3rem; margin-bottom:0.3rem;">Elevated Comfort</div>
+          <span style="font-family:var(--font-sans); font-size:0.65rem; color:var(--green); font-weight:500;">&#x2713; Available</span>
+          <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:0.5rem; margin:1rem 0; padding:0.8rem 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+            <div style="text-align:center;">
+              <div style="font-family:var(--font-sans); font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold);">Bed</div>
+              <div style="font-family:var(--font-sans); font-size:0.75rem; color:var(--onyx); margin-top:2px;">King</div>
+            </div>
+            <div style="text-align:center;">
+              <div style="font-family:var(--font-sans); font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold);">Guests</div>
+              <div style="font-family:var(--font-sans); font-size:0.75rem; color:var(--onyx); margin-top:2px;">3</div>
+            </div>
+            <div style="text-align:center;">
+              <div style="font-family:var(--font-sans); font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold);">Size</div>
+              <div style="font-family:var(--font-sans); font-size:0.75rem; color:var(--onyx); margin-top:2px;">36 m&sup2;</div>
+            </div>
+          </div>
+          <p style="font-family:var(--font-sans); font-size:0.78rem; color:var(--muted); line-height:1.7; margin-bottom:1rem;">Additional space and premium touches. Ideal for couples or business travellers seeking a more refined stay.</p>
+          <div style="font-family:var(--font-serif); font-size:1.5rem; color:var(--gold); margin-bottom:1rem;">&#x20A6;55,000 <span style="font-family:var(--font-sans); font-size:0.65rem; color:var(--muted);">/ night</span></div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.5rem;">
+            <a href="booking.html?room=deluxe" class="btn-primary" style="text-align:center; font-size:0.55rem; padding:0.7rem 1rem;">Book Now</a>
+            <a href="rooms.html" class="btn-ghost" style="text-align:center; font-size:0.55rem; padding:0.7rem 1rem; color:var(--onyx); border-color:var(--border);">View Details</a>
+          </div>
+        </div>
       </div>
-      <div style="border:1px solid var(--border); padding:2rem;">
-        <span class="section-label">&#x2726; Executive Suite</span>
-        <div style="font-family:var(--font-serif); font-size:1.6rem; margin:0.5rem 0 1rem;">The Finest Stay</div>
-        <ul style="list-style:none; margin-bottom:1.5rem;">
-          <li style="font-family:var(--font-sans); font-size:0.78rem; color:var(--muted); padding:0.3rem 0; border-bottom:1px solid var(--border);">King-sized bed</li>
-          <li style="font-family:var(--font-sans); font-size:0.78rem; color:var(--muted); padding:0.3rem 0; border-bottom:1px solid var(--border);">Separate living room</li>
-          <li style="font-family:var(--font-sans); font-size:0.78rem; color:var(--muted); padding:0.3rem 0; border-bottom:1px solid var(--border);">Private balcony</li>
-          <li style="font-family:var(--font-sans); font-size:0.78rem; color:var(--muted); padding:0.3rem 0; border-bottom:1px solid var(--border);">Complimentary breakfast</li>
-          <li style="font-family:var(--font-sans); font-size:0.78rem; color:var(--muted); padding:0.3rem 0;">VIP amenities</li>
-        </ul>
-        <a href="#book-form" class="btn-primary" style="display:block;text-align:center;">Book Suite</a>
+
+      <!-- EXECUTIVE SUITE -->
+      <div style="border:1px solid var(--border);">
+        <div style="height:200px; background:var(--bg-warm); display:flex; align-items:center; justify-content:center; border-bottom:1px solid var(--border);">
+          <img src="images/dining.jpg" alt="Executive Suite" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div style="padding:1.5rem;">
+          <span style="display:inline-block; font-family:var(--font-sans); font-size:0.5rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; background:var(--gold); color:var(--white); padding:0.25rem 0.8rem; margin-bottom:0.8rem;">Executive Suite</span>
+          <div style="font-family:var(--font-serif); font-size:1.3rem; margin-bottom:0.3rem;">The Finest Stay</div>
+          <span style="font-family:var(--font-sans); font-size:0.65rem; color:var(--green); font-weight:500;">&#x2713; Available</span>
+          <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:0.5rem; margin:1rem 0; padding:0.8rem 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+            <div style="text-align:center;">
+              <div style="font-family:var(--font-sans); font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold);">Bed</div>
+              <div style="font-family:var(--font-sans); font-size:0.75rem; color:var(--onyx); margin-top:2px;">King</div>
+            </div>
+            <div style="text-align:center;">
+              <div style="font-family:var(--font-sans); font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold);">Guests</div>
+              <div style="font-family:var(--font-sans); font-size:0.75rem; color:var(--onyx); margin-top:2px;">4</div>
+            </div>
+            <div style="text-align:center;">
+              <div style="font-family:var(--font-sans); font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold);">Size</div>
+              <div style="font-family:var(--font-sans); font-size:0.75rem; color:var(--onyx); margin-top:2px;">52 m&sup2;</div>
+            </div>
+          </div>
+          <p style="font-family:var(--font-sans); font-size:0.78rem; color:var(--muted); line-height:1.7; margin-bottom:1rem;">The pinnacle of luxury. A spacious retreat with a separate living area, private balcony, and VIP amenities.</p>
+          <div style="font-family:var(--font-serif); font-size:1.5rem; color:var(--gold); margin-bottom:1rem;">&#x20A6;85,000 <span style="font-family:var(--font-sans); font-size:0.65rem; color:var(--muted);">/ night</span></div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.5rem;">
+            <a href="booking.html?room=executive" class="btn-primary" style="text-align:center; font-size:0.55rem; padding:0.7rem 1rem;">Book Now</a>
+            <a href="rooms.html" class="btn-ghost" style="text-align:center; font-size:0.55rem; padding:0.7rem 1rem; color:var(--onyx); border-color:var(--border);">View Details</a>
+          </div>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
 
-<section class="content-section warm" id="book-form">
-  <div class="content-grid">
-    <div>
-      <span class="section-label">&#x2726; Reservation Form</span>
-      <div class="gold-divider"></div>
-      <h2 class="section-title">Complete Your Booking</h2>
-      <p class="section-desc">Fill out the details below and our team will confirm your reservation within 24 hours. For urgent bookings, message us on WhatsApp.</p>
-      <form style="margin-top:2rem;">
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
-          <div class="form-group">
-            <label for="first">First Name</label>
-            <input type="text" id="first" name="first" placeholder="Your first name">
-          </div>
-          <div class="form-group">
-            <label for="last">Last Name</label>
-            <input type="text" id="last" name="last" placeholder="Your last name">
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" placeholder="you@example.com">
-        </div>
-        <div class="form-group">
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone" placeholder="+234 800 000 0000">
-        </div>
-        <div class="form-group">
-          <label for="room-type">Room Type</label>
-          <select id="room-type" name="room-type">
-            <option value="">Select a room</option>
-            <option value="standard">Standard Room</option>
-            <option value="deluxe">Deluxe Room</option>
-            <option value="executive">Executive Suite</option>
-          </select>
-        </div>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
-          <div class="form-group">
-            <label for="checkin">Check-In Date</label>
-            <input type="date" id="checkin" name="checkin">
-          </div>
-          <div class="form-group">
-            <label for="checkout">Check-Out Date</label>
-            <input type="date" id="checkout" name="checkout">
-          </div>
-        </div>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
-          <div class="form-group">
-            <label for="adults">Adults</label>
-            <select id="adults" name="adults">
-              <option value="1">1</option>
-              <option value="2" selected>2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="children">Children</label>
-            <select id="children" name="children">
-              <option value="0" selected>0</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="requests">Special Requests</label>
-          <textarea id="requests" name="requests" placeholder="Any special requirements or preferences..."></textarea>
-        </div>
-        <button type="submit" class="btn-primary" style="border:none;">Submit Reservation</button>
-      </form>
-    </div>
-    <div>
-      <span class="section-label">&#x2726; Need Help?</span>
-      <div class="gold-divider"></div>
-      <p class="section-desc">Our team is available to assist with your booking. Reach out to us directly.</p>
-      <div class="contact-items" style="margin-top:1.5rem;">
-        <div class="contact-item">
-          <div class="contact-detail">
-            <strong>WhatsApp</strong>
-            <span>+234 000 000 0000</span>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-detail">
-            <strong>Phone</strong>
-            <span>+234 000 000 0000</span>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-detail">
-            <strong>Email</strong>
-            <span>hello@decoastalplace.com</span>
-          </div>
-        </div>
+<section class="content-section warm" id="enquiry-form">
+  <div class="inner" style="max-width:640px;">
+    <span class="section-label">&#x2726; Enquiry Form</span>
+    <div class="gold-divider"></div>
+    <h2 class="section-title">Send Us Your Request</h2>
+    <p class="section-desc">Fill out the form below and our team will get back to you within 24 hours. For urgent bookings, message us on WhatsApp.</p>
+    <form style="margin-top:2rem;">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Your full name">
       </div>
-      <div style="margin-top:2rem; padding:1.5rem; border:1px solid var(--border);">
-        <div style="font-family:var(--font-serif); font-size:1.1rem; color:var(--gold); margin-bottom:0.3rem;">Opening Hours</div>
-        <div style="font-family:var(--font-sans); font-size:0.82rem; color:var(--muted); line-height:1.8;">
-          Monday &ndash; Sunday<br>
-          10:00 AM &ndash; 11:00 PM
-        </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com">
       </div>
-      <div style="margin-top:2rem;">
-        <span class="section-label">&#x2726; Why Book Direct?</span>
-        <div style="margin-top:0.8rem; display:flex; flex-direction:column; gap:0.6rem;">
-          <div style="display:flex; align-items:center; gap:0.6rem;">
-            <span style="color:var(--gold);">&#x2726;</span>
-            <span style="font-family:var(--font-sans); font-size:0.8rem; color:var(--muted);">Best rate guarantee</span>
-          </div>
-          <div style="display:flex; align-items:center; gap:0.6rem;">
-            <span style="color:var(--gold);">&#x2726;</span>
-            <span style="font-family:var(--font-sans); font-size:0.8rem; color:var(--muted);">Free cancellation up to 48 hours</span>
-          </div>
-          <div style="display:flex; align-items:center; gap:0.6rem;">
-            <span style="color:var(--gold);">&#x2726;</span>
-            <span style="font-family:var(--font-sans); font-size:0.8rem; color:var(--muted);">Complimentary welcome drink</span>
-          </div>
-          <div style="display:flex; align-items:center; gap:0.6rem;">
-            <span style="color:var(--gold);">&#x2726;</span>
-            <span style="font-family:var(--font-sans); font-size:0.8rem; color:var(--muted);">Priority room selection</span>
-          </div>
-        </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="+234 800 000 0000">
       </div>
-    </div>
+      <div class="form-group">
+        <label for="room-interest">Room of Interest</label>
+        <select id="room-interest" name="room-interest">
+          <option value="">Select a room</option>
+          <option value="standard">Standard Room</option>
+          <option value="deluxe">Deluxe Room</option>
+          <option value="executive">Executive Suite</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="checkin">Preferred Check-In Date</label>
+        <input type="date" id="checkin" name="checkin">
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Any special requests, questions, or additional information..."></textarea>
+      </div>
+      <button type="submit" class="btn-primary" style="border:none;">Submit Enquiry</button>
+    </form>
   </div>
 </section>
 
