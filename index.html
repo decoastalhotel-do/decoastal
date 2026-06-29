@@ -4,186 +4,280 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="De Coastal Place — Premier leisure, fine dining, and events destination in Effurun, Warri, Delta State, Nigeria. Where the coast meets good living.">
-  <title>De Coastal Place — Where the Coast Meets Good Living</title>
+  <title>De Coastal Place — Effurun, Warri</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Top Contact Banner -->
-  <div class="top-banner">
-    <span>&#x1F4CD; Effurun, Warri, Delta State, Nigeria</span>
-    <span>&#x1F4DE; <a href="tel:+2348000000000">+234 800 000 0000</a></span>
-    <span>&#x1F4E7; <a href="mailto:hello@decoastalplace.com">hello@decoastalplace.com</a></span>
-  </div>
+<!-- NAVBAR -->
+<nav>
+  <a href="#home" class="nav-logo">De Coastal Place</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#experiences">Experiences</a></li>
+    <li><a href="#location">Find Us</a></li>
+  </ul>
+  <a href="https://wa.me/2340000000000" class="nav-cta" target="_blank" rel="noopener noreferrer">Book Now</a>
+  <button class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
 
-  <!-- Navbar -->
-  <nav class="navbar" aria-label="Main navigation">
-    <div class="container">
-      <a href="index.html" class="nav-logo">
-        <span class="nav-logo-icon">DC</span>
-        De Coastal Place
-      </a>
-      <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#x2630;</button>
-      <ul class="nav-links">
-        <li><a href="index.html" aria-current="page">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="experiences.html">Experiences</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="booking.html" class="nav-cta">Book Now</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section class="hero-home" aria-label="Hero">
-    <!-- Video -->
-    <video id="hero-video" class="hero-video" autoplay muted loop playsinline preload="auto">
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <video autoplay muted loop playsinline>
       <source src="images/de_coastal_hero.mp4" type="video/mp4">
     </video>
-
-    <!-- Ken Burns Slider (hidden until video ends) -->
-    <div id="hero-slider" class="hero-slider" style="display:none;">
-      <div class="hero-slide active" style="background-image: url('images/slide-1.jpg');"></div>
-      <div class="hero-slide" style="background-image: url('images/slide-2.jpg');"></div>
-      <div class="hero-slide" style="background-image: url('images/slide-3.jpg');"></div>
-      <div class="hero-slide" style="background-image: url('images/slide-4.jpg');"></div>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Where the Coast<br/>Meets Good Living</h1>
+    <p>De Coastal Place is Effurun's premier destination for leisure, fine dining, events, and unforgettable moments.</p>
+    <div class="hero-actions">
+      <a href="#experiences" class="btn-primary">Explore the Venue</a>
+      <a href="https://wa.me/2340000000000" class="btn-ghost" target="_blank" rel="noopener noreferrer">Book an Event</a>
     </div>
+  </div>
+  <div class="hero-scroll">Scroll</div>
+</section>
 
-    <!-- Overlay -->
-    <div class="hero-overlay">
-      <h1 class="hero-display">Where the Coast Meets Good Living</h1>
-      <p class="subtitle">Premier leisure, fine dining, and events destination in Effurun, Warri, Delta State</p>
-      <div class="hero-buttons">
-        <a href="booking.html" class="button-primary">Book an Event</a>
-        <a href="about.html" class="button-secondary" style="color:#fff;border-color:rgba(255,255,255,0.5);background:transparent;">Explore the Venue</a>
+<!-- STATS -->
+<div class="stats-strip">
+  <div class="stat">
+    <div class="stat-num">5&#x2605;</div>
+    <div class="stat-label">Guest Experience</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">500+</div>
+    <div class="stat-label">Events Hosted</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">3</div>
+    <div class="stat-label">Venue Spaces</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">7 Days</div>
+    <div class="stat-label">Open Weekly</div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-grid">
+    <div class="about-images">
+      <img class="about-img-main" src="images/about-hero.jpg" alt="De Coastal Place venue" loading="lazy"/>
+      <img class="about-img-accent" src="images/lounge.jpg" alt="Poolside lounge" loading="lazy"/>
+    </div>
+    <div class="about-text">
+      <span class="section-tag">&#x2726; Our Story</span>
+      <h2 class="section-title">A Coastal Escape<br/>in the Heart of Effurun</h2>
+      <p class="section-body">
+        Nestled in the vibrant twin-city of Effurun-Warri, De Coastal Place was built on a single belief — that Delta State deserves a world-class leisure destination that truly feels like home.
+        <br/><br/>
+        Whether you are unwinding after a long week, celebrating a milestone, or looking for a perfect evening out — De Coastal Place is your sanctuary.
+      </p>
+      <div class="about-features">
+        <div class="feat">
+          <div class="feat-icon">&#x1F30A;</div>
+          <div class="feat-text"><strong>Coastal Ambience</strong>Waterfront-inspired setting with breezy outdoor spaces</div>
+        </div>
+        <div class="feat">
+          <div class="feat-icon">&#x1F37D;&#xFE0F;</div>
+          <div class="feat-text"><strong>Fine Dining</strong>Nigerian cuisine and continental dishes, expertly prepared</div>
+        </div>
+        <div class="feat">
+          <div class="feat-icon">&#x1F389;</div>
+          <div class="feat-text"><strong>Event Hosting</strong>Birthdays, corporate events, and private parties</div>
+        </div>
+        <div class="feat">
+          <div class="feat-icon">&#x1F379;</div>
+          <div class="feat-text"><strong>Premium Bar</strong>Signature cocktails, wines, and local favourites</div>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Stats Bar -->
-  <section class="stats-bar" aria-label="Venue statistics">
-    <div class="container">
-      <div class="stats-grid">
-        <div class="stat-item">
-          <div class="stat-number" data-target="5★">0</div>
-          <div class="stat-label">Guest Experience</div>
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="gallery-header">
+    <span class="section-tag">&#x2726; Gallery</span>
+    <h2 class="section-title">A Glimpse of Paradise</h2>
+  </div>
+  <div class="gallery-grid">
+    <div class="g-item tall">
+      <img src="images/dining.jpg" alt="De Coastal Place dining area"/>
+    </div>
+    <div class="g-item">
+      <img src="images/bar.jpg" alt="De Coastal Place bar"/>
+    </div>
+    <div class="g-item">
+      <img src="images/events.jpg" alt="De Coastal Place events"/>
+    </div>
+    <div class="g-item">
+      <img src="images/lounge.jpg" alt="De Coastal Place lounge"/>
+    </div>
+    <div class="g-item">
+      <img src="images/pool.jpg" alt="De Coastal Place pool"/>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCES -->
+<section class="experiences" id="experiences">
+  <div class="exp-wrap">
+    <div class="exp-header">
+      <div>
+        <span class="section-tag">&#x2726; What We Offer</span>
+        <h2 class="section-title">Curated Experiences</h2>
+      </div>
+      <a href="https://wa.me/2340000000000" class="btn-primary" style="white-space: nowrap;" target="_blank" rel="noopener noreferrer">Reserve Your Space</a>
+    </div>
+    <div class="exp-grid">
+      <div class="exp-card">
+        <img src="images/lounge.jpg" alt="Leisure at De Coastal Place"/>
+        <div class="exp-card-body">
+          <span class="exp-card-tag">&#x2726; Leisure</span>
+          <h3 class="exp-card-title">The Coastal Lounge</h3>
+          <p class="exp-card-desc">Relax in our open-air lounge overlooking lush surroundings. Perfect for casual evenings, drinks with friends, or a quiet escape from the Warri hustle.</p>
         </div>
-        <div class="stat-item">
-          <div class="stat-number" data-target="500+">0</div>
-          <div class="stat-label">Events Hosted</div>
+      </div>
+      <div class="exp-card">
+        <img src="images/dining.jpg" alt="Dining at De Coastal Place"/>
+        <div class="exp-card-body">
+          <span class="exp-card-tag">&#x2726; Dining</span>
+          <h3 class="exp-card-title">Restaurant & Bar</h3>
+          <p class="exp-card-desc">From pepper soup and banga rice to continental platters — our kitchen serves Warri's finest meals alongside an expertly curated bar menu.</p>
         </div>
-        <div class="stat-item">
-          <div class="stat-number" data-target="3">0</div>
-          <div class="stat-label">Venue Spaces</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number" data-target="7">0</div>
-          <div class="stat-label">Days Open Weekly</div>
+      </div>
+      <div class="exp-card">
+        <img src="images/events.jpg" alt="Events at De Coastal Place"/>
+        <div class="exp-card-body">
+          <span class="exp-card-tag">&#x2726; Events</span>
+          <h3 class="exp-card-title">Events & Private Hire</h3>
+          <p class="exp-card-desc">Birthdays, corporate dinners, engagement parties, and more. Our event spaces accommodate intimate gatherings to large celebrations.</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Experiences Preview -->
-  <section class="section section-white" aria-label="Our experiences">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Explore De Coastal Place</h2>
-        <p class="subtitle">From coastal fine dining to vibrant event spaces — discover everything we offer</p>
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="test-inner">
+    <span class="section-tag">&#x2726; Guest Reviews</span>
+    <h2 class="section-title">What Our Guests Say</h2>
+    <div class="test-grid">
+      <div class="test-card">
+        <div class="stars">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
+        <p class="test-text">The ambience at De Coastal Place is unlike anything else in Effurun. We came for a birthday dinner and it exceeded every expectation.</p>
+        <div class="test-author">Chioma A.</div>
+        <div class="test-role">Port Harcourt, Nigeria</div>
       </div>
-      <div class="card-grid">
-        <article class="card">
-          <img src="images/dining.jpg" alt="Fine dining at De Coastal Place" class="card-media" loading="lazy">
-          <div class="card-body">
-            <h3 class="card-title">Fine Dining</h3>
-            <p>Nigerian and continental cuisine crafted by expert chefs in a coastal ambience.</p>
-            <a href="dining.html" class="button-primary" style="width:100%;">Explore Dining</a>
-          </div>
-        </article>
-        <article class="card">
-          <img src="images/bar.jpg" alt="Premium bar and cocktails at De Coastal Place" class="card-media" loading="lazy">
-          <div class="card-body">
-            <h3 class="card-title">Premium Bar</h3>
-            <p>Signature cocktails, fine wines, and local favourites in a sophisticated setting.</p>
-            <a href="bar.html" class="button-primary" style="width:100%;">Visit the Bar</a>
-          </div>
-        </article>
-        <article class="card">
-          <img src="images/events.jpg" alt="Event hosting at De Coastal Place" class="card-media" loading="lazy">
-          <div class="card-body">
-            <h3 class="card-title">Events & Celebrations</h3>
-            <p>Birthdays, corporate events, and private parties across three stunning venue spaces.</p>
-            <a href="events.html" class="button-primary" style="width:100%;">Plan Your Event</a>
-          </div>
-        </article>
-        <article class="card">
-          <img src="images/lounge.jpg" alt="Lounge ambience at De Coastal Place" class="card-media" loading="lazy">
-          <div class="card-body">
-            <h3 class="card-title">Coastal Lounge</h3>
-            <p>Unwind in our relaxed coastal lounge with curated music and handcrafted drinks.</p>
-            <a href="lounge.html" class="button-primary" style="width:100%;">Explore Lounge</a>
-          </div>
-        </article>
-        <article class="card">
-          <img src="images/pool.jpg" alt="Pool and outdoor leisure at De Coastal Place" class="card-media" loading="lazy">
-          <div class="card-body">
-            <h3 class="card-title">Pool & Outdoor Leisure</h3>
-            <p>Refresh in our pool and enjoy the outdoors in a tranquil coastal setting.</p>
-            <a href="pool.html" class="button-primary" style="width:100%;">See Pool & Leisure</a>
-          </div>
-        </article>
+      <div class="test-card">
+        <div class="stars">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
+        <p class="test-text">Hosted our company's end-of-year event here. The team was professional, the food was exceptional, and the setting made the evening truly memorable.</p>
+        <div class="test-author">Engr. Tonye B.</div>
+        <div class="test-role">Oil & Gas Professional, Warri</div>
+      </div>
+      <div class="test-card">
+        <div class="stars">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
+        <p class="test-text">Finally, a place in Warri that feels like you are on vacation without leaving the city. The cocktails are amazing and the vibe on weekends is unmatched.</p>
+        <div class="test-author">Blessing O.</div>
+        <div class="test-role">FUPRE Alumni, Effurun</div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/2348000000000?text=Hello%20De%20Coastal%20Place!%20I%27d%20like%20to%20make%20an%20enquiry." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
-    &#x1F4AC;
+<!-- WHATSAPP CTA -->
+<div class="cta-band" id="contact">
+  <h2>Ready to Visit or Book?</h2>
+  <p>Message us directly on WhatsApp — we respond fast, every day of the week.</p>
+  <a href="https://wa.me/2340000000000" class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
+    &#x1F4AC; Chat With Us on WhatsApp
   </a>
+</div>
 
-  <!-- Footer -->
-  <footer class="footer" aria-label="Site footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="nav-logo">
-            <span class="nav-logo-icon">DC</span>
-            De Coastal Place
+<!-- LOCATION -->
+<section class="location" id="location">
+  <div class="location-inner">
+    <div>
+      <span class="section-tag">&#x2726; Find Us</span>
+      <h2 class="section-title">Come Visit<br/>De Coastal Place</h2>
+      <p class="section-body">We are located in Effurun, easily accessible from Delta Mall, FUPRE, and the Effurun roundabout.</p>
+      <div class="contact-items">
+        <div class="contact-item">
+          <div class="contact-icon">&#x1F4CD;</div>
+          <div class="contact-detail">
+            <strong>Address</strong>
+            <span>Effurun, Warri, Delta State, Nigeria</span>
           </div>
-          <p>Where the coast meets good living. Premier leisure, fine dining, and events destination in the heart of Effurun, Warri, Delta State.</p>
         </div>
-        <div class="footer-links">
-          <h4>Quick Links</h4>
-          <a href="about.html">About Us</a>
-          <a href="dining.html">Dining</a>
-          <a href="bar.html">Bar</a>
-          <a href="events.html">Events</a>
-          <a href="gallery.html">Gallery</a>
+        <div class="contact-item">
+          <div class="contact-icon">&#x1F550;</div>
+          <div class="contact-detail">
+            <strong>Opening Hours</strong>
+            <span>Mon – Sun: 10:00 AM – 11:00 PM</span>
+          </div>
         </div>
-        <div class="footer-links">
-          <h4>Experiences</h4>
-          <a href="lounge.html">Lounge</a>
-          <a href="pool.html">Pool & Leisure</a>
-          <a href="booking.html">Book an Event</a>
-          <a href="contact.html">Contact Us</a>
+        <div class="contact-item">
+          <div class="contact-icon">&#x1F4DE;</div>
+          <div class="contact-detail">
+            <strong>Phone / WhatsApp</strong>
+            <span>+234 000 000 0000</span>
+          </div>
         </div>
-        <div class="footer-links">
-          <h4>Contact</h4>
-          <a href="https://maps.google.com/?q=Effurun+Warri+Delta+State+Nigeria" target="_blank" rel="noopener noreferrer">Effurun, Warri</a>
-          <a href="https://maps.google.com/?q=Delta+State+Nigeria" target="_blank" rel="noopener noreferrer">Delta State, Nigeria</a>
-          <a href="tel:+2348000000000">+234 800 000 0000</a>
-          <a href="mailto:hello@decoastalplace.com">hello@decoastalplace.com</a>
-          <a href="https://wa.me/2348000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <div class="contact-item">
+          <div class="contact-icon">&#x1F4F8;</div>
+          <div class="contact-detail">
+            <strong>Instagram & TikTok</strong>
+            <span>@decoastalplace</span>
+          </div>
         </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 De Coastal Place. All rights reserved.</p>
-        <p>Crafted with warmth in the Niger Delta</p>
       </div>
     </div>
-  </footer>
+    <div class="map-placeholder">
+      <div class="map-pin">&#x1F4CD;</div>
+      <div class="map-address">De Coastal Place</div>
+      <div class="map-label">Effurun, Warri, Delta State<br/><br/><small style="font-size:0.75rem; opacity:0.6">Google Maps embed will appear here</small></div>
+    </div>
+  </div>
+</section>
 
-  <script src="script.js"></script>
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">De Coastal Place</div>
+      <p class="footer-tagline">Effurun's premier coastal leisure destination — where great food, good vibes, and unforgettable events come together.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#experiences">Experiences</a></li>
+        <li><a href="#contact">Book an Event</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="https://instagram.com/decoastalplace" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li><a href="https://tiktok.com/@decoastalplace" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+        <li><a href="https://facebook.com/decoastalplace" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        <li><a href="https://wa.me/2340000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 De Coastal Place. Effurun, Warri, Delta State, Nigeria.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
