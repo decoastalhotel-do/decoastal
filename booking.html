@@ -36,112 +36,194 @@
 </section>
 
 <section class="content-section warm">
-  <div class="inner" style="text-align:center; max-width:700px;">
-    <span class="section-label">&#x2726; Our Rooms</span>
-    <div class="gold-divider" style="margin:0 auto 1.5rem;"></div>
-    <h2 class="section-title">Choose Your Perfect Space</h2>
-    <p class="section-desc" style="margin:0 auto;">Every room at De Coastal Place is designed for comfort. Select the room that suits your needs and we will take care of the rest.</p>
-  </div>
-</section>
-
-<section class="content-section" style="padding-top:0;">
   <div class="inner">
-    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1px;">
+    <div class="booking-wizard">
 
-      <!-- STANDARD -->
-      <div style="border:1px solid var(--border);">
-        <div style="height:200px; background:var(--bg-warm); display:flex; align-items:center; justify-content:center; border-bottom:1px solid var(--border);">
-          <img src="images/pool.jpg" alt="Standard Room" style="width:100%;height:100%;object-fit:cover;">
+      <!-- Step Indicator -->
+      <div class="booking-steps">
+        <div class="step-item active" data-step="1">
+          <div class="step-circle">1</div>
+          <div class="step-line"></div>
+          <div class="step-label">Your Stay</div>
         </div>
-        <div style="padding:1.5rem;">
-          <span style="display:inline-block; font-family:var(--font-sans); font-size:0.5rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; background:var(--gold); color:var(--white); padding:0.25rem 0.8rem; margin-bottom:0.8rem;">Standard</span>
-          <div style="font-family:var(--font-serif); font-size:1.3rem; margin-bottom:0.3rem;">Comfortable &amp; Cosy</div>
-          <span style="font-family:var(--font-sans); font-size:0.65rem; color:var(--green); font-weight:500;">&#x2713; Available</span>
-          <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:0.5rem; margin:1rem 0; padding:0.8rem 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
-            <div style="text-align:center;">
-              <div style="font-family:var(--font-sans); font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold);">Bed</div>
-              <div style="font-family:var(--font-sans); font-size:0.75rem; color:var(--onyx); margin-top:2px;">Queen</div>
-            </div>
-            <div style="text-align:center;">
-              <div style="font-family:var(--font-sans); font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold);">Guests</div>
-              <div style="font-family:var(--font-sans); font-size:0.75rem; color:var(--onyx); margin-top:2px;">2</div>
-            </div>
-            <div style="text-align:center;">
-              <div style="font-family:var(--font-sans); font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold);">Size</div>
-              <div style="font-family:var(--font-sans); font-size:0.75rem; color:var(--onyx); margin-top:2px;">28 m&sup2;</div>
-            </div>
-          </div>
-          <p style="font-family:var(--font-sans); font-size:0.78rem; color:var(--muted); line-height:1.7; margin-bottom:1rem;">A warm and inviting space with all the essentials for a restful stay. Thoughtfully appointed for the practical traveller.</p>
-          <div style="font-family:var(--font-serif); font-size:1.5rem; color:var(--gold); margin-bottom:1rem;">&#x20A6;35,000 <span style="font-family:var(--font-sans); font-size:0.65rem; color:var(--muted);">/ night</span></div>
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.5rem;">
-            <a href="booking.html?room=standard" class="btn-primary" style="text-align:center; font-size:0.55rem; padding:0.7rem 1rem;">Book Now</a>
-            <a href="rooms.html" class="btn-ghost" style="text-align:center; font-size:0.55rem; padding:0.7rem 1rem; color:var(--onyx); border-color:var(--border);">View Details</a>
-          </div>
+        <div class="step-item" data-step="2">
+          <div class="step-circle">2</div>
+          <div class="step-line"></div>
+          <div class="step-label">Your Details</div>
+        </div>
+        <div class="step-item" data-step="3">
+          <div class="step-circle">3</div>
+          <div class="step-label">Review &amp; Book</div>
         </div>
       </div>
 
-      <!-- DELUXE -->
-      <div style="border:1px solid var(--gold); position:relative;">
-        <div style="position:absolute; top:-1px; left:50%; transform:translateX(-50%); background:var(--gold); color:var(--white); font-family:var(--font-sans); font-size:0.5rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; padding:0.3rem 1rem; z-index:2;">Recommended</div>
-        <div style="height:200px; background:var(--bg-warm); display:flex; align-items:center; justify-content:center; border-bottom:1px solid var(--border);">
-          <img src="images/lounge.jpg" alt="Deluxe Room" style="width:100%;height:100%;object-fit:cover;">
+      <!-- Step 1: Your Stay -->
+      <div class="step-panel active" id="step-1">
+        <div style="text-align:center; margin-bottom:2rem;">
+          <span class="section-label">&#x2726; Step 1 of 3</span>
+          <h2 class="section-title">Choose Your Stay &amp; Room</h2>
+          <p class="section-desc" style="margin:0 auto;">Select your dates, number of guests, and preferred room.</p>
         </div>
-        <div style="padding:1.5rem;">
-          <span style="display:inline-block; font-family:var(--font-sans); font-size:0.5rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; background:var(--gold); color:var(--white); padding:0.25rem 0.8rem; margin-bottom:0.8rem;">Deluxe</span>
-          <div style="font-family:var(--font-serif); font-size:1.3rem; margin-bottom:0.3rem;">Elevated Comfort</div>
-          <span style="font-family:var(--font-sans); font-size:0.65rem; color:var(--green); font-weight:500;">&#x2713; Available</span>
-          <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:0.5rem; margin:1rem 0; padding:0.8rem 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
-            <div style="text-align:center;">
-              <div style="font-family:var(--font-sans); font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold);">Bed</div>
-              <div style="font-family:var(--font-sans); font-size:0.75rem; color:var(--onyx); margin-top:2px;">King</div>
-            </div>
-            <div style="text-align:center;">
-              <div style="font-family:var(--font-sans); font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold);">Guests</div>
-              <div style="font-family:var(--font-sans); font-size:0.75rem; color:var(--onyx); margin-top:2px;">3</div>
-            </div>
-            <div style="text-align:center;">
-              <div style="font-family:var(--font-sans); font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold);">Size</div>
-              <div style="font-family:var(--font-sans); font-size:0.75rem; color:var(--onyx); margin-top:2px;">36 m&sup2;</div>
+
+        <div class="date-row">
+          <div class="form-group">
+            <label for="checkin">Check-In Date</label>
+            <input type="date" id="checkin" name="checkin">
+          </div>
+          <div class="form-group">
+            <label for="checkout">Check-Out Date</label>
+            <input type="date" id="checkout" name="checkout">
+          </div>
+        </div>
+
+        <div class="nights-display" id="nightsDisplay">
+          Number of nights: <strong id="nightsCount">0</strong>
+        </div>
+
+        <div style="margin-top:1rem;">
+          <div class="form-group">
+            <label for="guests">Number of Guests</label>
+            <select id="guests" name="guests">
+              <option value="1">1</option>
+              <option value="2" selected>2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Room cards -->
+        <div class="room-grid" id="roomGrid">
+          <div class="room-card" data-room="standard" data-price="35000" data-name="Standard Room">
+            <div class="room-card-img"><img src="images/pool.jpg" alt="Standard Room"></div>
+            <div class="room-card-body">
+              <span class="room-card-badge">Standard</span>
+              <div class="room-card-name">Comfortable &amp; Cosy</div>
+              <span class="room-card-avail">&#x2713; Available</span>
+              <div class="room-card-price">&#x20A6;35,000 <span>/ night</span></div>
+              <div class="room-card-details">
+                <span>Queen bed</span>
+                <span>2 guests</span>
+                <span>28 m&sup2;</span>
+              </div>
+              <div class="room-card-tags">
+                <span>Wi-Fi</span>
+                <span>A/C</span>
+                <span>TV</span>
+                <span>En-suite</span>
+              </div>
+              <button class="btn-select" data-room="standard">Select Room</button>
             </div>
           </div>
-          <p style="font-family:var(--font-sans); font-size:0.78rem; color:var(--muted); line-height:1.7; margin-bottom:1rem;">Additional space and premium touches. Ideal for couples or business travellers seeking a more refined stay.</p>
-          <div style="font-family:var(--font-serif); font-size:1.5rem; color:var(--gold); margin-bottom:1rem;">&#x20A6;55,000 <span style="font-family:var(--font-sans); font-size:0.65rem; color:var(--muted);">/ night</span></div>
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.5rem;">
-            <a href="booking.html?room=deluxe" class="btn-primary" style="text-align:center; font-size:0.55rem; padding:0.7rem 1rem;">Book Now</a>
-            <a href="rooms.html" class="btn-ghost" style="text-align:center; font-size:0.55rem; padding:0.7rem 1rem; color:var(--onyx); border-color:var(--border);">View Details</a>
+
+          <div class="room-card" data-room="deluxe" data-price="55000" data-name="Deluxe Room">
+            <div class="room-card-img"><img src="images/lounge.jpg" alt="Deluxe Room"></div>
+            <div class="room-card-body">
+              <span class="room-card-badge">Deluxe</span>
+              <div class="room-card-name">Elevated Comfort</div>
+              <span class="room-card-avail">&#x2713; Available</span>
+              <div class="room-card-price">&#x20A6;55,000 <span>/ night</span></div>
+              <div class="room-card-details">
+                <span>King bed</span>
+                <span>3 guests</span>
+                <span>36 m&sup2;</span>
+              </div>
+              <div class="room-card-tags">
+                <span>Wi-Fi</span>
+                <span>A/C</span>
+                <span>Rain shower</span>
+                <span>Sitting area</span>
+              </div>
+              <button class="btn-select" data-room="deluxe">Select Room</button>
+            </div>
           </div>
+
+          <div class="room-card" data-room="executive" data-price="85000" data-name="Executive Suite">
+            <div class="room-card-img"><img src="images/dining.jpg" alt="Executive Suite"></div>
+            <div class="room-card-body">
+              <span class="room-card-badge">Executive Suite</span>
+              <div class="room-card-name">The Finest Stay</div>
+              <span class="room-card-avail">&#x2713; Available</span>
+              <div class="room-card-price">&#x20A6;85,000 <span>/ night</span></div>
+              <div class="room-card-details">
+                <span>King bed</span>
+                <span>4 guests</span>
+                <span>52 m&sup2;</span>
+              </div>
+              <div class="room-card-tags">
+                <span>Balcony</span>
+                <span>Living room</span>
+                <span>Breakfast</span>
+                <span>VIP</span>
+              </div>
+              <button class="btn-select" data-room="executive">Select Room</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="step-nav">
+          <div></div>
+          <button class="btn-next" id="toStep2" disabled>Next Step</button>
         </div>
       </div>
 
-      <!-- EXECUTIVE SUITE -->
-      <div style="border:1px solid var(--border);">
-        <div style="height:200px; background:var(--bg-warm); display:flex; align-items:center; justify-content:center; border-bottom:1px solid var(--border);">
-          <img src="images/dining.jpg" alt="Executive Suite" style="width:100%;height:100%;object-fit:cover;">
+      <!-- Step 2: Your Details -->
+      <div class="step-panel" id="step-2">
+        <div style="text-align:center; margin-bottom:2rem;">
+          <span class="section-label">&#x2726; Step 2 of 3</span>
+          <h2 class="section-title">Your Details</h2>
+          <p class="section-desc" style="margin:0 auto;">Tell us a bit about yourself so we can confirm your reservation.</p>
         </div>
-        <div style="padding:1.5rem;">
-          <span style="display:inline-block; font-family:var(--font-sans); font-size:0.5rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; background:var(--gold); color:var(--white); padding:0.25rem 0.8rem; margin-bottom:0.8rem;">Executive Suite</span>
-          <div style="font-family:var(--font-serif); font-size:1.3rem; margin-bottom:0.3rem;">The Finest Stay</div>
-          <span style="font-family:var(--font-sans); font-size:0.65rem; color:var(--green); font-weight:500;">&#x2713; Available</span>
-          <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:0.5rem; margin:1rem 0; padding:0.8rem 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
-            <div style="text-align:center;">
-              <div style="font-family:var(--font-sans); font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold);">Bed</div>
-              <div style="font-family:var(--font-sans); font-size:0.75rem; color:var(--onyx); margin-top:2px;">King</div>
-            </div>
-            <div style="text-align:center;">
-              <div style="font-family:var(--font-sans); font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold);">Guests</div>
-              <div style="font-family:var(--font-sans); font-size:0.75rem; color:var(--onyx); margin-top:2px;">4</div>
-            </div>
-            <div style="text-align:center;">
-              <div style="font-family:var(--font-sans); font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold);">Size</div>
-              <div style="font-family:var(--font-sans); font-size:0.75rem; color:var(--onyx); margin-top:2px;">52 m&sup2;</div>
-            </div>
-          </div>
-          <p style="font-family:var(--font-sans); font-size:0.78rem; color:var(--muted); line-height:1.7; margin-bottom:1rem;">The pinnacle of luxury. A spacious retreat with a separate living area, private balcony, and VIP amenities.</p>
-          <div style="font-family:var(--font-serif); font-size:1.5rem; color:var(--gold); margin-bottom:1rem;">&#x20A6;85,000 <span style="font-family:var(--font-sans); font-size:0.65rem; color:var(--muted);">/ night</span></div>
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.5rem;">
-            <a href="booking.html?room=executive" class="btn-primary" style="text-align:center; font-size:0.55rem; padding:0.7rem 1rem;">Book Now</a>
-            <a href="rooms.html" class="btn-ghost" style="text-align:center; font-size:0.55rem; padding:0.7rem 1rem; color:var(--onyx); border-color:var(--border);">View Details</a>
-          </div>
+
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" placeholder="Your full name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="+234 800 000 0000" required>
+        </div>
+        <div class="form-group">
+          <label for="requests">Special Requests</label>
+          <textarea id="requests" name="requests" placeholder="Allergies, occasion, seating preferences..." style="min-height:100px;"></textarea>
+        </div>
+
+        <div class="step-nav">
+          <button class="btn-back" id="backTo1">Back</button>
+          <button class="btn-next" id="toStep3">Next Step</button>
+        </div>
+      </div>
+
+      <!-- Step 3: Review & Book -->
+      <div class="step-panel" id="step-3">
+        <div style="text-align:center; margin-bottom:2rem;">
+          <span class="section-label">&#x2726; Step 3 of 3</span>
+          <h2 class="section-title">Review &amp; Confirm</h2>
+          <p class="section-desc" style="margin:0 auto;">Please review your booking details before confirming.</p>
+        </div>
+
+        <div class="summary-card" id="summaryCard">
+          <h4>Booking Summary</h4>
+          <div class="summary-row"><span class="label">Room</span><span class="value" id="summaryRoom">-</span></div>
+          <div class="summary-row"><span class="label">Check-In</span><span class="value" id="summaryCheckin">-</span></div>
+          <div class="summary-row"><span class="label">Check-Out</span><span class="value" id="summaryCheckout">-</span></div>
+          <div class="summary-row"><span class="label">Nights</span><span class="value" id="summaryNights">-</span></div>
+          <div class="summary-row"><span class="label">Guests</span><span class="value" id="summaryGuests">-</span></div>
+          <div class="summary-row"><span class="label">Guest Name</span><span class="value" id="summaryName">-</span></div>
+          <div class="summary-row"><span class="label">Email</span><span class="value" id="summaryEmail">-</span></div>
+          <div class="summary-row"><span class="label">Room Price / Night</span><span class="value" id="summaryRoomPrice">-</span></div>
+          <div class="summary-row"><span class="label">Total</span><span class="value" id="summaryTotal">-</span></div>
+        </div>
+
+        <div class="step-nav">
+          <button class="btn-back" id="backTo2">Back</button>
+          <button class="btn-confirm" id="confirmBooking">Confirm Booking</button>
         </div>
       </div>
 
@@ -149,46 +231,15 @@
   </div>
 </section>
 
-<section class="content-section warm" id="enquiry-form">
-  <div class="inner" style="max-width:640px;">
-    <span class="section-label">&#x2726; Enquiry Form</span>
-    <div class="gold-divider"></div>
-    <h2 class="section-title">Send Us Your Request</h2>
-    <p class="section-desc">Fill out the form below and our team will get back to you within 24 hours. For urgent bookings, message us on WhatsApp.</p>
-    <form action="#" method="POST" style="margin-top:2rem;">
-      <div class="form-group">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" name="name" placeholder="Your full name" required>
-      </div>
-      <div class="form-group">
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" placeholder="you@example.com" required>
-      </div>
-      <div class="form-group">
-        <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" name="phone" placeholder="+234 800 000 0000" required>
-      </div>
-      <div class="form-group">
-        <label for="room-interest">Room of Interest</label>
-        <select id="room-interest" name="room-interest" required>
-          <option value="">Select a room</option>
-          <option value="standard">Standard Room</option>
-          <option value="deluxe">Deluxe Room</option>
-          <option value="executive">Executive Suite</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="checkin">Preferred Check-In Date</label>
-        <input type="date" id="checkin" name="checkin" required>
-      </div>
-      <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="Any special requests, questions, or additional information..."></textarea>
-      </div>
-      <button type="submit" class="btn-primary" style="border:none;">Send Enquiry</button>
-    </form>
+<!-- Success Overlay -->
+<div class="success-overlay" id="successOverlay">
+  <div class="success-box">
+    <div class="success-icon">&#x2714;&#xFE0F;</div>
+    <h2>Booking Received!</h2>
+    <p>Thank you! Your booking request has been received. We will send a confirmation to your email shortly. You will also be redirected to WhatsApp to complete your booking.</p>
+    <a href="index.html" class="btn-primary">Return to Home</a>
   </div>
-</section>
+</div>
 
 <footer>
   <div class="footer-inner">
@@ -235,6 +286,144 @@
 <a href="https://wa.me/2340000000000" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
-<script src="script.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var currentStep = 1;
+  var selectedRoom = null;
+  var roomPrice = 0;
+  var roomName = '';
+
+  var stepPanels = {
+    1: document.getElementById('step-1'),
+    2: document.getElementById('step-2'),
+    3: document.getElementById('step-3')
+  };
+  var stepItems = document.querySelectorAll('.step-item');
+
+  function goToStep(step) {
+    Object.keys(stepPanels).forEach(function (key) {
+      stepPanels[key].classList.toggle('active', parseInt(key) === step);
+    });
+    stepItems.forEach(function (el) {
+      var s = parseInt(el.getAttribute('data-step'));
+      el.classList.toggle('active', s === step);
+      el.classList.toggle('completed', s < step);
+    });
+    currentStep = step;
+    window.scrollTo({ top: document.querySelector('.booking-wizard').offsetTop - 120, behavior: 'smooth' });
+  }
+
+  // Date logic
+  var checkin = document.getElementById('checkin');
+  var checkout = document.getElementById('checkout');
+  var nightsCount = document.getElementById('nightsCount');
+  var guests = document.getElementById('guests');
+
+  function calcNights() {
+    if (checkin.value && checkout.value) {
+      var d1 = new Date(checkin.value);
+      var d2 = new Date(checkout.value);
+      var diff = Math.max(0, Math.ceil((d2 - d1) / (1000 * 60 * 60 * 24)));
+      nightsCount.textContent = diff;
+    } else {
+      nightsCount.textContent = '0';
+    }
+    validateStep1();
+  }
+
+  checkin.addEventListener('change', calcNights);
+  checkout.addEventListener('change', calcNights);
+
+  // Room selection
+  var roomCards = document.querySelectorAll('.room-card');
+  roomCards.forEach(function (card) {
+    var btn = card.querySelector('.btn-select');
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      roomCards.forEach(function (c) { c.classList.remove('selected'); });
+      card.classList.add('selected');
+      selectedRoom = card.getAttribute('data-room');
+      roomPrice = parseInt(card.getAttribute('data-price'));
+      roomName = card.getAttribute('data-name');
+      validateStep1();
+    });
+  });
+
+  function validateStep1() {
+    var nights = parseInt(nightsCount.textContent);
+    var valid = checkin.value && checkout.value && nights > 0 && selectedRoom;
+    document.getElementById('toStep2').disabled = !valid;
+  }
+
+  // Navigation
+  document.getElementById('toStep2').addEventListener('click', function () {
+    goToStep(2);
+  });
+
+  document.getElementById('backTo1').addEventListener('click', function () {
+    goToStep(1);
+  });
+
+  document.getElementById('toStep3').addEventListener('click', function () {
+    populateSummary();
+    goToStep(3);
+  });
+
+  document.getElementById('backTo2').addEventListener('click', function () {
+    goToStep(2);
+  });
+
+  function formatPrice(n) {
+    return '&#x20A6;' + n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  }
+
+  function populateSummary() {
+    var nights = parseInt(nightsCount.textContent) || 0;
+    var total = roomPrice * nights;
+
+    document.getElementById('summaryRoom').textContent = roomName;
+    document.getElementById('summaryCheckin').textContent = checkin.value;
+    document.getElementById('summaryCheckout').textContent = checkout.value;
+    document.getElementById('summaryNights').textContent = nights;
+    document.getElementById('summaryGuests').textContent = guests.value;
+    document.getElementById('summaryName').textContent = document.getElementById('fullName').value || '-';
+    document.getElementById('summaryEmail').textContent = document.getElementById('email').value || '-';
+    document.getElementById('summaryRoomPrice').innerHTML = formatPrice(roomPrice);
+    document.getElementById('summaryTotal').innerHTML = formatPrice(total);
+  }
+
+  // Confirm booking
+  document.getElementById('confirmBooking').addEventListener('click', function () {
+    var name = document.getElementById('fullName').value;
+    var email = document.getElementById('email').value;
+    var phone = document.getElementById('phone').value;
+    var requests = document.getElementById('requests').value;
+    var nights = parseInt(nightsCount.textContent) || 0;
+    var total = roomPrice * nights;
+
+    var msg = 'Hello De Coastal Place!%0A%0A';
+    msg += 'I would like to book a room:%0A';
+    msg += 'Room: ' + roomName + '%0A';
+    msg += 'Check-In: ' + checkin.value + '%0A';
+    msg += 'Check-Out: ' + checkout.value + '%0A';
+    msg += 'Nights: ' + nights + '%0A';
+    msg += 'Guests: ' + guests.value + '%0A';
+    msg += 'Total: NGN ' + total.toLocaleString() + '%0A%0A';
+    msg += 'My Details:%0A';
+    msg += 'Name: ' + name + '%0A';
+    msg += 'Email: ' + email + '%0A';
+    msg += 'Phone: ' + phone + '%0A';
+    if (requests) msg += 'Requests: ' + requests + '%0A';
+
+    document.getElementById('successOverlay').classList.add('show');
+
+    setTimeout(function () {
+      window.open('https://wa.me/2340000000000?text=' + msg, '_blank');
+    }, 1200);
+  });
+});
+</script>
+
 </body>
 </html>
