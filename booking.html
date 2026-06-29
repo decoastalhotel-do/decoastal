@@ -17,7 +17,6 @@
     <li><a href="about.html">About</a></li>
     <li><a href="rooms.html">Rooms</a></li>
     <li><a href="gallery.html">Gallery</a></li>
-    <li><a href="booking.html">Booking</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
   <a href="booking.html" class="nav-cta">Book Now</a>
@@ -208,38 +207,65 @@
           <p class="section-desc" style="margin:0 auto;">Please review your booking details before confirming.</p>
         </div>
 
-        <div class="summary-card" id="summaryCard">
-          <h4>Booking Summary</h4>
-          <div class="summary-row"><span class="label">Room</span><span class="value" id="summaryRoom">-</span></div>
-          <div class="summary-row"><span class="label">Check-In</span><span class="value" id="summaryCheckin">-</span></div>
-          <div class="summary-row"><span class="label">Check-Out</span><span class="value" id="summaryCheckout">-</span></div>
-          <div class="summary-row"><span class="label">Nights</span><span class="value" id="summaryNights">-</span></div>
-          <div class="summary-row"><span class="label">Guests</span><span class="value" id="summaryGuests">-</span></div>
-          <div class="summary-row"><span class="label">Guest Name</span><span class="value" id="summaryName">-</span></div>
-          <div class="summary-row"><span class="label">Email</span><span class="value" id="summaryEmail">-</span></div>
-          <div class="summary-row"><span class="label">Room Price / Night</span><span class="value" id="summaryRoomPrice">-</span></div>
-          <div class="summary-row"><span class="label">Total</span><span class="value" id="summaryTotal">-</span></div>
+        <!-- Review card (hidden on success) -->
+        <div id="reviewContent">
+          <div class="summary-card" id="summaryCard">
+            <h4>Booking Summary</h4>
+            <div class="summary-row"><span class="label">Room</span><span class="value" id="summaryRoom">-</span></div>
+            <div class="summary-row"><span class="label">Check-In</span><span class="value" id="summaryCheckin">-</span></div>
+            <div class="summary-row"><span class="label">Check-Out</span><span class="value" id="summaryCheckout">-</span></div>
+            <div class="summary-row"><span class="label">Nights</span><span class="value" id="summaryNights">-</span></div>
+            <div class="summary-row"><span class="label">Guests</span><span class="value" id="summaryGuests">-</span></div>
+            <div class="summary-row"><span class="label">Guest Name</span><span class="value" id="summaryName">-</span></div>
+            <div class="summary-row"><span class="label">Email</span><span class="value" id="summaryEmail">-</span></div>
+            <div class="summary-row"><span class="label">Room Price / Night</span><span class="value" id="summaryRoomPrice">-</span></div>
+            <div class="summary-row"><span class="label">Total</span><span class="value" id="summaryTotal">-</span></div>
+          </div>
+
+          <div class="confirm-note">
+            By confirming, your booking details will be sent to our WhatsApp reservations team at <strong>+234 800 000 0000</strong>.
+          </div>
+
+          <div class="step-nav">
+            <button class="btn-back" id="backTo2">Back</button>
+            <button class="btn-confirm" id="confirmBooking">Confirm Booking</button>
+          </div>
+          <!-- FUTURE: Add a "Pay Now" button here once a real payment gateway is integrated -->
         </div>
 
-        <div class="step-nav">
-          <button class="btn-back" id="backTo2">Back</button>
-          <button class="btn-confirm" id="confirmBooking">Confirm Booking</button>
+        <!-- Success screen (shown after confirm) -->
+        <div class="success-screen" id="successScreen">
+          <div style="text-align:center;">
+            <div class="success-check">&#x2705;</div>
+            <h2>Booking Request Received!</h2>
+            <p class="success-msg">
+              Your booking request has been sent to our WhatsApp team. You will be contacted at <strong id="successEmail">your email</strong> within 24 hours to confirm your reservation.
+              <br><br>
+              <strong>Please do not make any payment until you receive a confirmation from our team.</strong>
+            </p>
+          </div>
+
+          <div class="payment-box" id="paymentBox">
+            <h4>Complete Your Payment</h4>
+            <div class="payment-row"><span class="pay-label">Bank Name</span><span class="pay-value">GTBank (GTCO)</span></div>
+            <div class="payment-row"><span class="pay-label">Account Name</span><span class="pay-value">De Coastal Place Ltd</span></div>
+            <div class="payment-row"><span class="pay-label">Account Number</span><span class="pay-value">012 345 6789</span></div>
+            <div class="payment-row"><span class="pay-label">Amount Due</span><span class="pay-value" id="paymentAmount">-</span></div>
+            <div class="payment-instr">Transfer the exact amount above using your name as the narration.</div>
+            <div class="payment-demo-note">These are placeholder details for demo purposes until a real payment gateway is integrated.</div>
+          </div>
+
+          <div class="success-actions">
+            <a href="#" class="btn-primary" id="sendReceiptBtn">Send Payment Receipt via WhatsApp</a>
+            <a href="index.html" class="btn-ghost">Back to Homepage</a>
+            <a href="#" class="btn-ghost" id="resendBookingBtn">Resend Booking to WhatsApp</a>
+          </div>
         </div>
       </div>
 
     </div>
   </div>
 </section>
-
-<!-- Success Overlay -->
-<div class="success-overlay" id="successOverlay">
-  <div class="success-box">
-    <div class="success-icon">&#x2714;&#xFE0F;</div>
-    <h2>Booking Received!</h2>
-    <p>Thank you! Your booking request has been received. We will send a confirmation to your email shortly. You will also be redirected to WhatsApp to complete your booking.</p>
-    <a href="index.html" class="btn-primary">Return to Home</a>
-  </div>
-</div>
 
 <footer>
   <div class="footer-inner">
@@ -254,7 +280,6 @@
         <li><a href="about.html">About</a></li>
         <li><a href="rooms.html">Rooms</a></li>
         <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="booking.html">Booking</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
@@ -393,6 +418,9 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('summaryTotal').innerHTML = formatPrice(total);
   }
 
+  var bookingMsg = '';
+  var bookingTotal = 0;
+
   // Confirm booking
   document.getElementById('confirmBooking').addEventListener('click', function () {
     var name = document.getElementById('fullName').value;
@@ -400,27 +428,53 @@ document.addEventListener('DOMContentLoaded', function () {
     var phone = document.getElementById('phone').value;
     var requests = document.getElementById('requests').value;
     var nights = parseInt(nightsCount.textContent) || 0;
-    var total = roomPrice * nights;
+    bookingTotal = roomPrice * nights;
 
-    var msg = 'Hello De Coastal Place!%0A%0A';
-    msg += 'I would like to book a room:%0A';
-    msg += 'Room: ' + roomName + '%0A';
-    msg += 'Check-In: ' + checkin.value + '%0A';
-    msg += 'Check-Out: ' + checkout.value + '%0A';
-    msg += 'Nights: ' + nights + '%0A';
-    msg += 'Guests: ' + guests.value + '%0A';
-    msg += 'Total: NGN ' + total.toLocaleString() + '%0A%0A';
-    msg += 'My Details:%0A';
-    msg += 'Name: ' + name + '%0A';
-    msg += 'Email: ' + email + '%0A';
-    msg += 'Phone: ' + phone + '%0A';
-    if (requests) msg += 'Requests: ' + requests + '%0A';
+    bookingMsg = 'Hello De Coastal Place!%0A%0A';
+    bookingMsg += 'I would like to book a room:%0A';
+    bookingMsg += 'Room: ' + roomName + '%0A';
+    bookingMsg += 'Check-In: ' + checkin.value + '%0A';
+    bookingMsg += 'Check-Out: ' + checkout.value + '%0A';
+    bookingMsg += 'Nights: ' + nights + '%0A';
+    bookingMsg += 'Guests: ' + guests.value + '%0A';
+    bookingMsg += 'Total: NGN ' + bookingTotal.toLocaleString() + '%0A%0A';
+    bookingMsg += 'My Details:%0A';
+    bookingMsg += 'Name: ' + name + '%0A';
+    bookingMsg += 'Email: ' + email + '%0A';
+    bookingMsg += 'Phone: ' + phone + '%0A';
+    if (requests) bookingMsg += 'Requests: ' + requests + '%0A';
 
-    document.getElementById('successOverlay').classList.add('show');
+    // Populate success screen
+    document.getElementById('successEmail').textContent = email;
+    document.getElementById('paymentAmount').innerHTML = 'NGN ' + bookingTotal.toLocaleString();
 
+    // Hide review, show success
+    document.getElementById('reviewContent').style.display = 'none';
+    document.getElementById('successScreen').classList.add('show');
+
+    // Send booking message to WhatsApp
     setTimeout(function () {
-      window.open('https://wa.me/2340000000000?text=' + msg, '_blank');
-    }, 1200);
+      window.open('https://wa.me/2340000000000?text=' + bookingMsg, '_blank');
+    }, 800);
+  });
+
+  // Send Payment Receipt
+  document.getElementById('sendReceiptBtn').addEventListener('click', function (e) {
+    e.preventDefault();
+    var name = document.getElementById('fullName').value;
+    var receiptMsg = 'Hello De Coastal Place!%0A%0A';
+    receiptMsg += 'I have made a payment for my booking.%0A';
+    receiptMsg += 'Name: ' + name + '%0A';
+    receiptMsg += 'Amount: NGN ' + bookingTotal.toLocaleString() + '%0A';
+    receiptMsg += 'Please find my payment receipt attached below.%0A%0A';
+    receiptMsg += '(Receipt image to be attached manually)';
+    window.open('https://wa.me/2340000000000?text=' + receiptMsg, '_blank');
+  });
+
+  // Resend Booking
+  document.getElementById('resendBookingBtn').addEventListener('click', function (e) {
+    e.preventDefault();
+    window.open('https://wa.me/2340000000000?text=' + bookingMsg, '_blank');
   });
 });
 </script>
