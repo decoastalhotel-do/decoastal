@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book your event at De Coastal Place in Effurun, Warri, Delta State. Birthdays, corporate events, private dinners, and cocktail parties.">
+  <title>Book Your Event — De Coastal Place</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .booking-section {
+      padding: 48px 0 80px;
+    }
+
+    .form-card {
+      background: var(--palette-white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--elevation-high);
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 48px 40px;
+    }
+
+    /* Step Indicator */
+    .step-indicator {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      margin-bottom: 40px;
+    }
+
+    .step-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .step-pill {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      font-size: 15px;
+      font-weight: 600;
+      font-family: var(--font-sans);
+      transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    .step-pill.active {
+      background: var(--palette-rausch);
+      color: var(--palette-white);
+      border: 2px solid var(--palette-rausch);
+    }
+
+    .step-pill.inactive {
+      background: transparent;
+      color: var(--palette-grey600);
+      border: 2px solid var(--palette-grey400);
+    }
+
+    .step-label {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--palette-text-secondary);
+      white-space: nowrap;
+      transition: color 0.3s ease;
+    }
+
+    .step-label.active-label {
+      color: var(--palette-rausch);
+      font-weight: 600;
+    }
+
+    .step-line {
+      width: 48px;
+      height: 2px;
+      background: var(--palette-grey400);
+      margin: 0 12px;
+      transition: background 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    .step-line.done {
+      background: var(--palette-rausch);
+    }
+
+    /* Form Steps */
+    .form-step {
+      display: none;
+    }
+
+    .form-step.active-step {
+      display: block;
+    }
+
+    .form-step h3 {
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--palette-grey1000);
+      margin-bottom: 4px;
+    }
+
+    .form-step .step-sub {
+      font-size: 15px;
+      color: var(--palette-text-secondary);
+      margin-bottom: 28px;
+      line-height: 1.4;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--palette-grey1000);
+      margin-bottom: 6px;
+    }
+
+    .form-group label .label-note {
+      font-weight: 400;
+      color: var(--palette-grey600);
+      letter-spacing: normal;
+    }
+
+    .form-group select.input {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236C6C6C' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      padding-right: 44px;
+      cursor: pointer;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .form-row-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+    }
+
+    textarea.input {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    /* Summary Card (Step 3) */
+    .summary-card {
+      background: var(--palette-capiz);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--elevation-secondary);
+      padding: 28px 24px;
+      margin-bottom: 28px;
+    }
+
+    .summary-card h4 {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--palette-grey1000);
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--palette-grey300);
+    }
+
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      font-size: 15px;
+    }
+
+    .summary-row .summary-label {
+      color: var(--palette-text-secondary);
+      font-weight: 400;
+    }
+
+    .summary-row .summary-value {
+      color: var(--palette-grey1000);
+      font-weight: 500;
+      text-align: right;
+      max-width: 60%;
+    }
+
+    /* Navigation Buttons */
+    .form-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid var(--palette-grey300);
+    }
+
+    .form-nav .button-primary,
+    .form-nav .button-secondary {
+      min-width: 140px;
+    }
+
+    .form-nav .button-secondary {
+      min-width: 100px;
+    }
+
+    .btn-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .btn-whatsapp .wa-icon {
+      font-size: 18px;
+    }
+
+    .step-3-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .step-3-buttons .button-primary {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .step-3-buttons .button-secondary {
+      flex: 1;
+      min-width: 140px;
+    }
+
+    /* Responsive */
+    @media (max-width: 743px) {
+      .form-card {
+        padding: 28px 20px;
+      }
+
+      .step-label {
+        display: none;
+      }
+
+      .step-line {
+        width: 28px;
+        margin: 0 6px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .form-row-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .form-nav {
+        flex-direction: column;
+      }
+
+      .form-nav .button-primary,
+      .form-nav .button-secondary {
+        width: 100%;
+      }
+
+      .step-3-buttons {
+        flex-direction: column;
+      }
+
+      .step-3-buttons .button-primary,
+      .step-3-buttons .button-secondary {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body style="background:var(--palette-faint);">
+
+  <!-- Top Contact Banner -->
+  <div class="top-banner">
+    <span>&#x1F4CD; Effurun, Warri, Delta State, Nigeria</span>
+    <span>&#x1F4DE; <a href="tel:+2348000000000">+234 800 000 0000</a></span>
+    <span>&#x1F4E7; <a href="mailto:hello@decoastalplace.com">hello@decoastalplace.com</a></span>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo-icon">DC</span>
+        De Coastal Place
+      </a>
+      <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#x2630;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="experiences.html">Experiences</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="booking.html" class="nav-cta" aria-current="page">Book Now</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="section section-white" style="padding-bottom:0;">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Book Your Event</h2>
+        <p class="subtitle">Tell us what you have in mind and we'll take care of the rest. Coastal hospitality starts here.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Form -->
+  <section class="booking-section">
+    <div class="container">
+      <div class="form-card">
+
+        <!-- Step Indicator -->
+        <div class="step-indicator" role="tablist" aria-label="Booking steps">
+          <div class="step-item">
+            <div class="step-pill active" id="pill-1" role="tab" aria-selected="true" aria-label="Step 1">1</div>
+            <span class="step-label active-label" id="label-1">Your Event</span>
+          </div>
+          <div class="step-line" id="line-1"></div>
+          <div class="step-item">
+            <div class="step-pill inactive" id="pill-2" role="tab" aria-selected="false" aria-label="Step 2">2</div>
+            <span class="step-label" id="label-2">Your Details</span>
+          </div>
+          <div class="step-line" id="line-2"></div>
+          <div class="step-item">
+            <div class="step-pill inactive" id="pill-3" role="tab" aria-selected="false" aria-label="Step 3">3</div>
+            <span class="step-label" id="label-3">Review &amp; Book</span>
+          </div>
+        </div>
+
+        <!-- Step 1 — Your Event -->
+        <div class="form-step active-step" id="step-1" role="tabpanel">
+          <h3>Your Event</h3>
+          <p class="step-sub">Help us understand the occasion so we can prepare something truly memorable.</p>
+
+          <div class="form-group">
+            <label for="event-type">Event Type</label>
+            <select id="event-type" class="input" required>
+              <option value="" disabled selected>Select your event type</option>
+              <option value="Birthday Celebration">Birthday Celebration</option>
+              <option value="Corporate Event">Corporate Event</option>
+              <option value="Private Dinner">Private Dinner</option>
+              <option value="Cocktail Party">Cocktail Party</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="event-date">Preferred Date</label>
+              <input type="date" id="event-date" class="input" required>
+            </div>
+            <div class="form-group">
+              <label for="event-time">Preferred Time</label>
+              <input type="time" id="event-time" class="input" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="guest-count">Number of Guests</label>
+            <select id="guest-count" class="input" required>
+              <option value="" disabled selected>Select guest count</option>
+              <option value="1—10">1 — 10 guests</option>
+              <option value="11—20">11 — 20 guests</option>
+              <option value="21—40">21 — 40 guests</option>
+              <option value="41—60">41 — 60 guests</option>
+              <option value="61—80">61 — 80 guests</option>
+              <option value="81—100">81 — 100 guests</option>
+              <option value="100+">100+ guests</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Step 2 — Your Details -->
+        <div class="form-step" id="step-2" role="tabpanel">
+          <h3>Your Details</h3>
+          <p class="step-sub">We'll use this information to confirm your booking and reach out with a personalised plan.</p>
+
+          <div class="form-group">
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" class="input" placeholder="e.g. Ada Eze" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" class="input" placeholder="ada@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number <span class="label-note">(Nigerian number preferred)</span></label>
+              <input type="tel" id="phone" class="input" placeholder="e.g. 0803 123 4567" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="special-requests">Special Requests <span class="label-note">(optional)</span></label>
+            <textarea id="special-requests" class="input" placeholder="Dietary requirements, decor preferences, entertainment needs — let us know what would make your event perfect."></textarea>
+          </div>
+        </div>
+
+        <!-- Step 3 — Review & Book -->
+        <div class="form-step" id="step-3" role="tabpanel">
+          <h3>Review &amp; Book</h3>
+          <p class="step-sub">Please review your booking details before confirming. Nothing is set in stone until you say the word.</p>
+
+          <div class="summary-card" id="summary-card">
+            <h4>Booking Summary</h4>
+            <div class="summary-row">
+              <span class="summary-label">Event Type</span>
+              <span class="summary-value" id="summary-event">—</span>
+            </div>
+            <div class="summary-row">
+              <span class="summary-label">Date</span>
+              <span class="summary-value" id="summary-date">—</span>
+            </div>
+            <div class="summary-row">
+              <span class="summary-label">Time</span>
+              <span class="summary-value" id="summary-time">—</span>
+            </div>
+            <div class="summary-row">
+              <span class="summary-label">Guests</span>
+              <span class="summary-value" id="summary-guests">—</span>
+            </div>
+            <div class="summary-row">
+              <span class="summary-label">Name</span>
+              <span class="summary-value" id="summary-name">—</span>
+            </div>
+            <div class="summary-row">
+              <span class="summary-label">Email</span>
+              <span class="summary-value" id="summary-email">—</span>
+            </div>
+            <div class="summary-row">
+              <span class="summary-label">Phone</span>
+              <span class="summary-value" id="summary-phone">—</span>
+            </div>
+            <div class="summary-row" id="summary-requests-row" style="display:none;">
+              <span class="summary-label">Special Requests</span>
+              <span class="summary-value" id="summary-requests">—</span>
+            </div>
+          </div>
+
+          <div class="step-3-buttons">
+            <a href="#" class="button-primary btn-whatsapp" id="confirm-booking">
+              <span class="wa-icon">&#x1F4AC;</span>
+              Confirm Booking via WhatsApp
+            </a>
+            <a href="#" class="button-secondary btn-whatsapp" id="resend-whatsapp">
+              <span class="wa-icon">&#x1F4AC;</span>
+              Resend to WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="form-nav">
+          <button class="button-secondary" id="btn-back" style="visibility:hidden;">Back</button>
+          <button class="button-primary" id="btn-next">Next Step</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/2348000000000?text=Hello%20De%20Coastal%20Place!%20I%27d%20like%20to%20book%20an%20event." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
+    &#x1F4AC;
+  </a>
+
+  <!-- Footer -->
+  <footer class="footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo">
+            <span class="nav-logo-icon">DC</span>
+            De Coastal Place
+          </div>
+          <p>Where the coast meets good living. Premier leisure, fine dining, and events destination in the heart of Effurun, Warri, Delta State.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="about.html">About Us</a>
+          <a href="dining.html">Dining</a>
+          <a href="bar.html">Bar</a>
+          <a href="events.html">Events</a>
+          <a href="gallery.html">Gallery</a>
+        </div>
+        <div class="footer-links">
+          <h4>Experiences</h4>
+          <a href="lounge.html">Lounge</a>
+          <a href="pool.html">Pool & Leisure</a>
+          <a href="booking.html">Book an Event</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="footer-links">
+          <h4>Contact</h4>
+          <a href="https://maps.google.com/?q=Effurun+Warri+Delta+State+Nigeria" target="_blank" rel="noopener noreferrer">Effurun, Warri</a>
+          <a href="https://maps.google.com/?q=Delta+State+Nigeria" target="_blank" rel="noopener noreferrer">Delta State, Nigeria</a>
+          <a href="tel:+2348000000000">+234 800 000 0000</a>
+          <a href="mailto:hello@decoastalplace.com">hello@decoastalplace.com</a>
+          <a href="https://wa.me/2348000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 De Coastal Place. All rights reserved.</p>
+        <p>Crafted with warmth in the Niger Delta</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    (function () {
+      // ---- State ----
+      var currentStep = 1;
+      var totalSteps = 3;
+      var whatsappNumber = '2348000000000';
+
+      function getVal(id) {
+        var el = document.getElementById(id);
+        return el ? el.value : '';
+      }
+
+      function getSelectedText(id) {
+        var el = document.getElementById(id);
+        if (!el) return '';
+        return el.options[el.selectedIndex] ? el.options[el.selectedIndex].text : '';
+      }
+
+      // ---- UI refs ----
+      var step1 = document.getElementById('step-1');
+      var step2 = document.getElementById('step-2');
+      var step3 = document.getElementById('step-3');
+      var pill1 = document.getElementById('pill-1');
+      var pill2 = document.getElementById('pill-2');
+      var pill3 = document.getElementById('pill-3');
+      var label1 = document.getElementById('label-1');
+      var label2 = document.getElementById('label-2');
+      var label3 = document.getElementById('label-3');
+      var line1 = document.getElementById('line-1');
+      var line2 = document.getElementById('line-2');
+      var btnBack = document.getElementById('btn-back');
+      var btnNext = document.getElementById('btn-next');
+
+      function showStep(step) {
+        // hide all
+        step1.classList.remove('active-step');
+        step2.classList.remove('active-step');
+        step3.classList.remove('active-step');
+
+        // pills
+        function setPill(pill, label, isActive, isDone) {
+          pill.className = 'step-pill ' + (isActive ? 'active' : 'inactive');
+          pill.setAttribute('aria-selected', isActive ? 'true' : 'false');
+          label.className = 'step-label' + (isActive ? ' active-label' : '');
+        }
+
+        setPill(pill1, label1, step === 1, step > 1);
+        setPill(pill2, label2, step === 2, step > 2);
+        setPill(pill3, label3, step === 3, step > 3);
+
+        // lines
+        line1.className = 'step-line' + (step > 1 ? ' done' : '');
+        line2.className = 'step-line' + (step > 2 ? ' done' : '');
+
+        // show active step
+        if (step === 1) step1.classList.add('active-step');
+        else if (step === 2) step2.classList.add('active-step');
+        else if (step === 3) step3.classList.add('active-step');
+
+        // buttons
+        btnBack.style.visibility = step === 1 ? 'hidden' : 'visible';
+        if (step === totalSteps) {
+          btnNext.style.display = 'none';
+        } else {
+          btnNext.style.display = '';
+          btnNext.textContent = step === 1 ? 'Next Step' : 'Next Step';
+        }
+
+        // scroll to top of form card
+        var formCard = document.querySelector('.form-card');
+        if (formCard) {
+          formCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+
+      function validateStep1() {
+        var eventType = getVal('event-type');
+        var eventDate = getVal('event-date');
+        var eventTime = getVal('event-time');
+        var guestCount = getVal('guest-count');
+        if (!eventType) { alert('Please select your event type.'); return false; }
+        if (!eventDate) { alert('Please select your preferred date.'); return false; }
+        if (!eventTime) { alert('Please select your preferred time.'); return false; }
+        if (!guestCount) { alert('Please select the number of guests.'); return false; }
+        return true;
+      }
+
+      function validateStep2() {
+        var name = getVal('full-name').trim();
+        var email = getVal('email').trim();
+        var phone = getVal('phone').trim();
+        if (!name) { alert('Please enter your full name.'); return false; }
+        if (!email) { alert('Please enter your email address.'); return false; }
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { alert('Please enter a valid email address.'); return false; }
+        if (!phone) { alert('Please enter your phone number.'); return false; }
+        return true;
+      }
+
+      function populateSummary() {
+        document.getElementById('summary-event').textContent = getSelectedText('event-type');
+        var rawDate = getVal('event-date');
+        if (rawDate) {
+          var parts = rawDate.split('-');
+          var d = new Date(parts[0], parts[1] - 1, parts[2]);
+          var options = { year: 'numeric', month: 'long', day: 'numeric' };
+          document.getElementById('summary-date').textContent = d.toLocaleDateString('en-US', options);
+        } else {
+          document.getElementById('summary-date').textContent = '—';
+        }
+        document.getElementById('summary-time').textContent = getVal('event-time') || '—';
+        document.getElementById('summary-guests').textContent = getSelectedText('guest-count') || '—';
+        document.getElementById('summary-name').textContent = getVal('full-name') || '—';
+        document.getElementById('summary-email').textContent = getVal('email') || '—';
+        document.getElementById('summary-phone').textContent = getVal('phone') || '—';
+
+        var requests = getVal('special-requests').trim();
+        var row = document.getElementById('summary-requests-row');
+        var el = document.getElementById('summary-requests');
+        if (requests) {
+          el.textContent = requests;
+          row.style.display = 'flex';
+        } else {
+          row.style.display = 'none';
+        }
+      }
+
+      function buildWhatsAppMessage() {
+        var lines = [];
+        lines.push('De Coastal Place — Event Booking');
+        lines.push('');
+        lines.push('Event: ' + getSelectedText('event-type'));
+        var rawDate = getVal('event-date');
+        if (rawDate) {
+          var parts = rawDate.split('-');
+          var d = new Date(parts[0], parts[1] - 1, parts[2]);
+          lines.push('Date: ' + d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }));
+        }
+        lines.push('Time: ' + getVal('event-time'));
+        lines.push('Guests: ' + getSelectedText('guest-count'));
+        lines.push('');
+        lines.push('Name: ' + getVal('full-name'));
+        lines.push('Email: ' + getVal('email'));
+        lines.push('Phone: ' + getVal('phone'));
+        var requests = getVal('special-requests').trim();
+        if (requests) {
+          lines.push('Special Requests: ' + requests);
+        }
+        return lines.join('\n');
+      }
+
+      function openWhatsApp(message) {
+        var url = 'https://wa.me/' + whatsappNumber + '?text=' + encodeURIComponent(message);
+        window.open(url, '_blank');
+      }
+
+      // ---- Navigation events ----
+      btnNext.addEventListener('click', function () {
+        if (currentStep === 1) {
+          if (!validateStep1()) return;
+          currentStep = 2;
+          showStep(currentStep);
+        } else if (currentStep === 2) {
+          if (!validateStep2()) return;
+          currentStep = 3;
+          populateSummary();
+          showStep(currentStep);
+        }
+      });
+
+      btnBack.addEventListener('click', function () {
+        if (currentStep > 1) {
+          currentStep--;
+          showStep(currentStep);
+        }
+      });
+
+      // ---- WhatsApp buttons ----
+      document.getElementById('confirm-booking').addEventListener('click', function (e) {
+        e.preventDefault();
+        var msg = buildWhatsAppMessage();
+        openWhatsApp(msg);
+      });
+
+      document.getElementById('resend-whatsapp').addEventListener('click', function (e) {
+        e.preventDefault();
+        var msg = buildWhatsAppMessage();
+        openWhatsApp(msg);
+      });
+
+      // ---- Init ----
+      showStep(1);
+
+      // Set min date on date picker
+      var dateInput = document.getElementById('event-date');
+      if (dateInput) {
+        var today = new Date();
+        var yyyy = today.getFullYear();
+        var mm = String(today.getMonth() + 1).padStart(2, '0');
+        var dd = String(today.getDate()).padStart(2, '0');
+        dateInput.setAttribute('min', yyyy + '-' + mm + '-' + dd);
+      }
+
+    })();
+  </script>
+</body>
+</html>
